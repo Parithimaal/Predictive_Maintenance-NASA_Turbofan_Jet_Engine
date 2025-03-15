@@ -18,7 +18,7 @@ class RegressionDataset(Dataset):
 # Defining model
 class DynamicSeqRegNN(nn.Module):
     def __init__(self, input_size, hidden_sizes=[128, 64, 32], activation=nn.ReLU(), dropout=False):
-        super(DynamicRegNN, self).__init__()
+        super(DynamicSeqRegNN, self).__init__()
         self.output_size=1
         self.input_size = input_size
         self.hidden_sizes = hidden_sizes

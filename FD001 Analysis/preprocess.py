@@ -50,6 +50,9 @@ class Preprocessor:
         df_norm[cols] = self.minmaxscaler.fit_transform(df_norm[(cols)])
         return df_norm
     
+    def get_minmaxscaler(self):
+        return self.minmaxscaler
+    
     @staticmethod
     def group_by_rul(df, cols):
         agg_dict = {
@@ -59,6 +62,15 @@ class Preprocessor:
         agg_dict['unit'] = 'count'
         agg_dict['cycles'] = 'mean'
         return df.groupby('rul').agg(agg_dict)
+    
+    @staticmethod
+    def group_by_unit(df, cols):
+        agg_dict = {
+            item: 'mean'
+            for item in cols
+        }
+        agg_dict['cycles'] = 'mean'
+        return df.groupby('unit').agg(agg_dict)
     
 class Charting:
     
