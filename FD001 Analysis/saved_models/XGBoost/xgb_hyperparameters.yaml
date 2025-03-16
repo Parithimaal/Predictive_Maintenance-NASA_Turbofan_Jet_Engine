@@ -3,7 +3,7 @@ booster: null
 callbacks: null
 colsample_bylevel: null
 colsample_bynode: null
-colsample_bytree: 0.8
+colsample_bytree: 0.7
 device: null
 early_stopping_rounds: null
 enable_categorical: false
@@ -24,7 +24,7 @@ min_child_weight: null
 missing: .nan
 monotone_constraints: null
 multi_strategy: null
-n_estimators: 200
+n_estimators: 50
 n_jobs: null
 num_parallel_tree: null
 objective: reg:squarederror
@@ -33,7 +33,7 @@ reg_alpha: null
 reg_lambda: null
 sampling_method: null
 scale_pos_weight: null
-subsample: 1.0
+subsample: 0.7
 tree_method: null
 validate_parameters: null
 verbosity: null
