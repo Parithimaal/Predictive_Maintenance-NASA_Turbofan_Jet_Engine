@@ -104,14 +104,15 @@ class Charting:
     @staticmethod
     def plot_avg_sensor_data(grouped_train_norm, sensor_cols):
         y_columns = sensor_cols
-        return px.line(grouped_train_norm, x=grouped_train_norm.index, y=y_columns)
+        fig = px.line(grouped_train_norm, x=grouped_train_norm.index, y=y_columns, title="Average Sensor values over all units vs RUL")
+        return 
         
 
     @staticmethod
     def plot_corr_heatmap(grouped_df):
         plt.figure(figsize=(12, 10))
         sns.heatmap(np.round(grouped_df.reset_index().corr(), 2), annot=True, cmap='coolwarm')
-        plt.title('Seaborn Correlation Matrix')
+        plt.title('Correlation Matrix')
         return plt
     
     @staticmethod
@@ -131,5 +132,6 @@ class Charting:
                 annotation_text=f"{line_names[i]}",
                 annotation_position="top"
             )
+        fig.update_layout(title_text='Histogram of Max cycle of each unit')
         return fig
     

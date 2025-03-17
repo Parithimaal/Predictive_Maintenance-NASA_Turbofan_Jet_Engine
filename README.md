@@ -92,10 +92,11 @@ To replicate the analysis:
 4. The Testing.ipynb contains the evaluation of saved models from Main.ipynb
 
 ## Results and Discussion
-The XGBoost model was the best performer with the an RMSE of 37.25. Interestingly, performing PCA with components responsible for 96% of variance yielded much poorer results. Though the performance of the models is appreciable, it could be improved by providing the models context of the temporal series and past data for each unit.
+The XGBoost model was the best performer with the an RMSE of 37.71. Interestingly, performing PCA with components responsible for 96% of variance yielded much poorer results. The feature importance of Random Forest Mode indicated that the number of cycles, sensors values 11 were the most important factors based on which splits were made. Though the performance of the models is appreciable, it could be improved by providing the models context of the temporal series and past data for each unit.
 
 ## Future Work
 - **Deep Learning:** Using Neural Networks such as LSTM and GRU to capture temporal patterns
+- **Asymmetric Loss function** Using an Asyemmtric Loss function to penalize over-prediction than under-prediction
 
 ## References
 [NASA Turbofan Engine Degradation Simulation Data Set](https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6/about_data)
