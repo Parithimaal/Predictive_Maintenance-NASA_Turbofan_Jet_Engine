@@ -172,3 +172,10 @@ cython_debug/
 
 #vscode settings
 settings.json
+
+# Ignore all parquet files
+*.parquet
+
+# Ignore all pickle files
+*.pkl
+*.pickle
