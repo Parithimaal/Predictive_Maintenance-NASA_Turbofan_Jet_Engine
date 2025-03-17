@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project focuses on developing predictive maintenance models for NASA's Turbofan Jet Engines. By analyzing engine sensor data, the goal is to predict the Remaining Useful Life (RUL) of each engine, enabling proactive maintenance and reducing downtime.
+This project focuses on developing predictive maintenance models for NASA's Turbofan Jet Engines. By analyzing engine sensor data, the goal is to predict the Remaining Useful Life (RUL) of each engine, enabling proactive maintenance and reducing downtime. If you are seeing this in github, please open the Exported HTML notebooks folder to see plotly graphs which are not natively supported in ipynb format in github.
 
 ## Dataset Description
 
@@ -17,6 +17,9 @@ Key characteristics of the dataset include:
 ```
 Predictive_Maintenance-NASA_Turbofan_Jet_Engine/
 │
+├── Main.html
+├── Testing.html
+│
 ├── data/
 │   └── processed/
 │
@@ -24,7 +27,7 @@ Predictive_Maintenance-NASA_Turbofan_Jet_Engine/
 │   ├── Main.ipynb
 |   ├── Testing.ipynb
 |   ├── saved_models/
-|   ├── saved_scalers/
+|   ├── saved_scalers/ #(Empty on initial run)
 |   ├── preprocess.py
 │
 ├── Deep Learning/
@@ -96,7 +99,7 @@ The XGBoost model was the best performer with the an RMSE of 37.71. Interestingl
 
 ## Future Work
 - **Deep Learning:** Using Neural Networks such as LSTM and GRU to capture temporal patterns
-- **Asymmetric Loss function** Using an Asyemmtric Loss function to penalize over-prediction than under-prediction
+- **Asymmetric Loss function:** Using an Asyemmtric Loss function to penalize over-prediction than under-prediction
 
 ## References
 [NASA Turbofan Engine Degradation Simulation Data Set](https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6/about_data)
